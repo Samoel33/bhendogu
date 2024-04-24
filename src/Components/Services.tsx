@@ -57,7 +57,6 @@ const brands={
   }
 }
 export default function ServicesComponent() {
-  // const results= await getTestimonial(); 
   
   return (
     <>
