@@ -20,7 +20,7 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <Navigation/>
-        <main>
+        <main className="overflow-x-hidden">
         {children}
         </main>
         </body>

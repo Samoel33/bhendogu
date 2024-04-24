@@ -33,7 +33,11 @@ height: 0;
     
     
 }
-.active a::after{
+.active a{
+    z-index: 3;
+    position: relative;
+}
+.active::after{
     z-index: 1;
      background-color:rgba(21,56,76,0.7);
     position: absolute;
