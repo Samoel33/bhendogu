@@ -24,7 +24,7 @@ const config: Config = {
       },
       maxWidth: {
         "md-s": "75ch",
-        "lg-s": "65ch",
+        "lg-s": "80ch",
       },
       keyframes: {
         "up-down": {

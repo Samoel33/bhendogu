@@ -1,5 +1,6 @@
 "use client"
 import React,{useState} from 'react'
+import Image from "next/image"
 import Link from 'next/link'
 import {
   FaAlignRight,
@@ -12,6 +13,8 @@ import {
 } from "react-icons/fa6";
 import { MdOutlineHome,MdElectricalServices } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import logo from '../../public/logo1.svg'
+import fullLogo from '../../public/bhendogu.svg'
 
 
 export default function Navigation() {
@@ -19,6 +22,7 @@ export default function Navigation() {
   const links=[
     {"id":3, "link":"Services"},
     {"id":2, "link":"About"},
+    {"id":1, "link":"Projects"},
   ]
    const toggleburger=()=>{
     (!isClicked)? setClicked(true):setClicked(false)
@@ -31,10 +35,11 @@ export default function Navigation() {
  }
   return (
     <>
-    <nav className='w-full bg-secondary h-20 flex justify-between lg:sticky xs:fixed top-0 right-0 z-10'>
+    <nav className='w-full bg-secondary h-15 flex justify-between lg:sticky xs:fixed top-0 right-0 z-10'>
       <div className="h-full flex justify-start ">
           <Link href="/" className="">
-            <img src="bhendogu.svg" height={20} width={200} alt="LOGO" />
+            <Image src={fullLogo} height={15} width={200} alt="LOGO" className="xs:hidden lg:block" />
+            <Image src={logo} alt="LOGO" className="xs:block lg:hidden size-20" />
           </Link>
         </div>
       <ul className="lg:flex sm:hidden md:hidden xs:hidden w-1/2 justify-between navigation">
@@ -67,11 +72,11 @@ export default function Navigation() {
       </li>
       </ul>
       {isClicked ? (
-          <button className="w-20 lg:hidden" onClick={toggleburger}>
+          <button className="w-20 lg:hidden" onClick={toggleburger} type='submit' name='menu'>
             <FaTimes className="text-4xl text-primary" />
           </button>
         ) : (
-          <button className="w-20 lg:hidden" onClick={toggleburger}>
+          <button className="w-20 lg:hidden" onClick={toggleburger} type='reset' name='menu'>
             <FaAlignRight className="text-4xl text-text-primary" />
           </button>
         )}
