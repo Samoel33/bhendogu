@@ -19,7 +19,8 @@ const nextConfig = {
 
     baseURL:"https://bhendogutechnologies.co.za"
   },
-  styledComponents:true, 
+  compiler:{
+  styledComponents:true,} 
 };
 
 export default nextConfig;
